@@ -19,40 +19,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
             background-image: linear-gradient(to right top, #051937, #0f234c, #1d2d61, #2e3676, #423f8b);
         }
 
-        .gameTitle {
-            text-align: center;
+        canvas {
+            position: absolute;
         }
 
-        .startBtn {
-            text-align: center;
+        #start {
+            position: absolute;
+            top: 10;
+            right: 10;
         }
     </style>
 </head>
 
 <body>
-    <div class="gameTitle">
-        <h1>¡No te rías!</h1>
-        <div class="startBtn">
-            <button id="start" type="button" class="btn btn-outline-light">Iniciar juego</button>
-            <button id="code" type="button" class="btn btn-outline-light">ver reconocimiento</button>
-        </div>
-    </div>
+    <button id="start" type="button" class="btn btn-outline-light">ir al juego</button>
+    <video id="video" width="720" height="560" autoplay muted></video>
 
-    <script type="text/javascript">
-        var game = document.querySelector("#start");
-        var code = document.querySelector("#code");
-        game.addEventListener('click', function () {
-            window.location.replace('game.html');
-        });
-
-        code.addEventListener('click', function () {
-            window.location.replace('faceRecognition.html');
+    <script>
+        var game = document.addEventListener('click', (e) => {
+            window.location.replace('index.html');
         });
     </script>
+    <!-- lib -->
+    <script type="text/javascript" src="face-api.js"></script>
+    <script type="text/javascript" src="recog.js"></script>
 </body>
 
 </html>
