@@ -35,18 +35,29 @@
             right: 0;
             border-radius: 50rem;
         }
+
+        #start {
+            position: absolute;
+            top: 10;
+            right: 10;
+        }
     </style>
 
 </head>
 
 <body>
+    <button id="start" type="button" class="btn btn-outline-light">Salir</button>
     <div id="player"></div>
-
     <video id="video" width="300px" height="300px" autoplay muted></video>
 
     <script src="https://www.youtube.com/player_api"></script>
     <script type="text/javascript" defer src="face-api.js"></script> 
     <script type="text/javascript" defer src="index.js"></script>
+    <script>
+        var game = document.addEventListener('click', (e) => {
+            window.location.replace('index.html');
+        })
+    </script>
     <script type="text/javascript">
 
         // create youtube player
